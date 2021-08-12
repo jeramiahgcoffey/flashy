@@ -28,4 +28,4 @@ class Cards:
         self.word_dict_list.remove(self.random_card)
         words_to_learn = pandas.DataFrame.from_dict(self.word_dict_list)
         with open("data/words_to_learn.csv", mode="w") as data:
-            data.write(words_to_learn.to_csv())
+            data.write(words_to_learn.to_csv(index=False))
